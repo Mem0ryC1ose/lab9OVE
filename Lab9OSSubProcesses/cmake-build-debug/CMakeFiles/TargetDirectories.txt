@@ -1,5 +1,0 @@
-E:/CLionProjects/Lab9OSSubProcesses/cmake-build-debug/CMakeFiles/Lab9OSSubProcesses.dir
-E:/CLionProjects/Lab9OSSubProcesses/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/CLionProjects/Lab9OSSubProcesses/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-E:/CLionProjects/Lab9OSSubProcesses/cmake-build-debug/CMakeFiles/Lab9OSSubProcesses_autogen_timestamp_deps.dir
-E:/CLionProjects/Lab9OSSubProcesses/cmake-build-debug/CMakeFiles/Lab9OSSubProcesses_autogen.dir

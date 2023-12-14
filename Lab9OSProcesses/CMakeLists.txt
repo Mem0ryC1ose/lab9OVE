@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.23)
-project(Lab9OSSubProcesses)
+project(Lab9OSProcesses)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "D:/Qt/6.3.2/mingw_64")
+set(CMAKE_PREFIX_PATH "C:/Qt/6.6.0/mingw_64")
 
 find_package(Qt6 COMPONENTS
         Core
@@ -14,8 +14,8 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Lab9OSSubProcesses main.cpp mainwindow2.cpp mainwindow2.h mainwindow2.ui)
-target_link_libraries(Lab9OSSubProcesses
+add_executable(Lab9OSProcesses main.cpp mainwindow2.cpp mainwindow2.h mainwindow2.ui)
+target_link_libraries(Lab9OSProcesses
         Qt::Core
         Qt::Gui
         Qt::Widgets

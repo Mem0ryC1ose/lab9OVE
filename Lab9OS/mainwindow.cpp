@@ -9,35 +9,35 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setStyleSheet("background-color: black;");
+    this->setStyleSheet("background-color: rgb(51, 63, 77);");
     connect(ui->bBeginVoting, SIGNAL(clicked(bool)), this, SLOT(beginVotingPushed()));
     connect(ui->bNextIdea, SIGNAL(clicked(bool)), this, SLOT(nextIdea()));
 
-    ui->lBorderLeft->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
-    ui->lBorderLeft->setFont(QFont("fixedsys, 12"));
+    ui->lBorderLeft->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0); border: 2px solid rgb(95, 146, 222)");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->lBorderRight->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
-    ui->lBorderRight->setFont(QFont("fixedsys, 12"));
+    ui->lBorderRight->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0); border: 2px solid rgb(95, 146, 222)");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->bProcessCount->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0);");
-    ui->bProcessCount->setFont(QFont("fixedsys, 12"));
+    ui->bProcessCount->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0);");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->lProcessCount->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0);");
-    ui->lProcessCount->setFont(QFont("fixedsys, 12"));
+    ui->lProcessCount->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0);");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->lProcessCount->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0);");
-    ui->lProcessCount->setFont(QFont("fixedsys, 12"));
+    ui->lProcessCount->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0);");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->bProcessCountSet->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
-    ui->bProcessCountSet->setFont(QFont("fixedsys, 12"));
+    ui->bProcessCountSet->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0); border: 2px solid rgb(95, 146, 222)");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->bBeginVoting->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
-    ui->bBeginVoting->setFont(QFont("fixedsys, 12"));
+    ui->bBeginVoting->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0); border: 2px solid rgb(95, 146, 222)");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->bNextIdea->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
-    ui->bNextIdea->setFont(QFont("fixedsys, 12"));
+    ui->bNextIdea->setStyleSheet("color: rgb(95, 146, 222); background-color: rgb(0,0,0); border: 2px solid rgb(95, 146, 222)");
+    ui->lBorderLeft->setFont(QFont("Montserrat, 12"));
 
-    ui->textEdit->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
+    ui->textEdit->setStyleSheet("color: rgb(28, 30, 33); background-color: rgb(128, 169, 217); border: 2px solid rgb(95, 146, 222)");
 }
 
 MainWindow::~MainWindow()
@@ -120,7 +120,7 @@ void MainWindow::startProcesses() {
     thread1.detach();
 }
 void MainWindow::wait3MinutesAndBeginVote() {
-    Sleep(THREE_MINUTES_IN_MILLIS);
+    Sleep(THREE_MINUTES_IN_MILLIS); // Три хвилини на створення ідей
     printMsg("Ideas generating has finished\n---------------------------------------------");
     for(std::pair<_PROCESS_INFORMATION, HANDLE> process : processes){
         writeToPipe(process.second, L"1");

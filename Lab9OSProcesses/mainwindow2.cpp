@@ -5,10 +5,13 @@
 // You may need to build the project (run Qt uic code generator) to get "ui_MainWindow2.h" resolved
 
 #include "mainwindow2.h"
-#include "ui_MainWindow2.h"
+#include "D:\unik\OS\lab9\Lab9OSSubProcesses\cmake-build-debug\Lab9OSSubProcesses_autogen\include\ui_MainWindow2.h"
 #include <iostream>
 #include <fstream>
 #include <QMessageBox>
+#include <mutex>
+
+std::mutex ideasMutex;
 
 
 MainWindow2::MainWindow2(int id, QWidget *parent) :
@@ -16,15 +19,15 @@ MainWindow2::MainWindow2(int id, QWidget *parent) :
     ui->setupUi(this);
     connect(ui->bProcessVoteYes, SIGNAL(clicked(bool)), this, SLOT(onbProcessVoteYes_clicked()));
     connect(ui->bProcessVoteNo, SIGNAL(clicked(bool)), this, SLOT(onbProcessVoteNo_clicked()));
-    this->setStyleSheet("background-color: black;");
+    this->setStyleSheet("background-color: rgb(51, 63, 77);");
 
-    ui->bProcessVoteYes->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
+    ui->bProcessVoteYes->setStyleSheet("color: rgb(28, 30, 33); background-color: rgb(0,0,0); border: 2px solid rgb(28, 30, 33)");
     ui->bProcessVoteYes->setFont(QFont("fixedsys, 12"));
 
-    ui->bProcessVoteNo->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
+    ui->bProcessVoteNo->setStyleSheet("color: rgb(28, 30, 33); background-color: rgb(0,0,0); border: 2px solid rgb(28, 30, 33)");
     ui->bProcessVoteNo->setFont(QFont("fixedsys, 12"));
 
-    ui->textEdit->setStyleSheet("color: rgb(14,254,146); background-color: rgb(0,0,0); border: 2px solid rgb(14,254,146)");
+    ui->textEdit->setStyleSheet("color: rgb(28, 30, 33); background-color: rgb(128, 169, 217); border: 2px solid rgb(28, 30, 33)");
     this->id = id;
     std::string temp3(R"(\\.\pipe\pipe)" + std::to_string(id));
     std::wstring temp2 = std::wstring(temp3.begin(), temp3.end());
@@ -40,7 +43,9 @@ MainWindow2::MainWindow2(int id, QWidget *parent) :
     std::ifstream ifstream(R"(E:\CLionProjects\Lab9OSSubProcesses\ideasBase.txt)");
     std::string currentIdea;
     while(std::getline(ifstream, currentIdea)){
+        ideasMutex.lock();
         ideas.push_back(currentIdea);
+        ideasMutex.unlock();
     }
     if(ideas.empty()){
         QMessageBox::critical(nullptr, "Error", "Empty ideas base file");

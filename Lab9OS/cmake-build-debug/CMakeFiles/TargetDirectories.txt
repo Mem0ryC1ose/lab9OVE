@@ -1,5 +1,5 @@
-E:/CLionProjects/Lab9OS/cmake-build-debug/CMakeFiles/Lab9OS.dir
-E:/CLionProjects/Lab9OS/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/CLionProjects/Lab9OS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-E:/CLionProjects/Lab9OS/cmake-build-debug/CMakeFiles/Lab9OS_autogen_timestamp_deps.dir
-E:/CLionProjects/Lab9OS/cmake-build-debug/CMakeFiles/Lab9OS_autogen.dir
+D:/unik/OS/lab9OVE/Lab9OS/cmake-build-debug/CMakeFiles/Lab9OS.dir
+D:/unik/OS/lab9OVE/Lab9OS/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/unik/OS/lab9OVE/Lab9OS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/unik/OS/lab9OVE/Lab9OS/cmake-build-debug/CMakeFiles/Lab9OS_autogen_timestamp_deps.dir
+D:/unik/OS/lab9OVE/Lab9OS/cmake-build-debug/CMakeFiles/Lab9OS_autogen.dir

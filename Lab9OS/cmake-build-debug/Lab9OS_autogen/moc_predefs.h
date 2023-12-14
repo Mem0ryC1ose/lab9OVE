@@ -159,6 +159,7 @@
 #define __DEC128_EPSILON__ 1E-33DL
 #define __SSE2_MATH__ 1
 #define __ATOMIC_HLE_RELEASE 131072
+#define __WIN32__ 1
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffLL
 #define __amd64 1
 #define __ATOMIC_HLE_ACQUIRE 65536
@@ -285,7 +286,6 @@
 #define __INT_FAST8_MAX__ 0x7f
 #define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
 #define __INTPTR_MAX__ 0x7fffffffffffffffLL
-#define __WIN32__ 1
 #define __cpp_sized_deallocation 201309L
 #define __cpp_guaranteed_copy_elision 201606L
 #define __FLT64_HAS_QUIET_NAN__ 1

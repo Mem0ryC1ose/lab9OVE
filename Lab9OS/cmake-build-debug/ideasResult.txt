@@ -1,6 +1,6 @@
-Прогуляти пари from student #0
+Пограти у комп'ютерну гру from student #0
 with 2 votes
-Підготуватись до іспиту from student #1
+Сходити у спортзал from student #1
 with 2 votes
-Сходити в піцерію from student #1
-with 1 votes
+Взяти участь в студентській олімпіаді from student #1
+with 2 votes
